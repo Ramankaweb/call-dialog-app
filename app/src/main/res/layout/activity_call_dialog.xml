@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a1a"
+    tools:context=".CallDialogActivity">
+
+    <!-- Gradient Background -->
+    <View
+        android:id="@+id/viewGradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background" />
+
+    <!-- Caller Image -->
+    <ImageView
+        android:id="@+id/ivCallerImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:contentDescription="Caller Image"
+        android:scaleType="centerCrop" />
+
+    <!-- Caller Name -->
+    <TextView
+        android:id="@+id/tvCallerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivCallerImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="John Doe"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <!-- Caller Number -->
+    <TextView
+        android:id="@+id/tvCallerNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCallerName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="+91 9876543210"
+        android:textColor="#CCCCCC"
+        android:textSize="16sp" />
+
+    <!-- Call Status -->
+    <TextView
+        android:id="@+id/tvCallStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCallerNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Incoming Call..."
+        android:textColor="#FFD700"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <!-- Button Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="30dp">
+
+        <!-- Reject Button -->
+        <Button
+            android:id="@+id/btnReject"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="✗"
+            android:textSize="24sp"
+            android:backgroundTint="#FF4444"
+            android:layout_marginEnd="30dp"
+            android:padding="0dp" />
+
+        <!-- Answer Button -->
+        <Button
+            android:id="@+id/btnAnswer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="✓"
+            android:textSize="24sp"
+            android:backgroundTint="#4CAF50"
+            android:padding="0dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
